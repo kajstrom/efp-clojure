@@ -1,14 +1,6 @@
-# efp-clojure
+# Exercises for Programmers in Clojure
 
-A Clojure library designed to ... well, that part is up to you.
+(Exercises for Programmers)[https://pragprog.com/book/bhwb/exercises-for-programmers]
 
-## Usage
-
-FIXME
-
-## License
-
-Copyright © 2018 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+## TODO
+- E01 create test test
