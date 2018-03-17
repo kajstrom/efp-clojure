@@ -6,3 +6,9 @@
     (println message)
     (read-line))
   )
+
+(defn make-int-prompt
+  [message]
+  (fn []
+    (println message)
+    (Integer/parseInt (read-line))))

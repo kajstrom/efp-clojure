@@ -1,14 +1,9 @@
-(ns efp-clojure.E05.e05)
+(ns efp-clojure.E05.e05
+  (:require [efp-clojure.utils.prompt :refer :all]))
 
-(defn- prompt-first-number
-  []
-  (println"What is the first number? ")
-  (Integer/parseInt (read-line)))
+(def prompt-first-number (make-int-prompt "What is the first number? "))
 
-(defn- prompt-second-number
-  []
-  (println "What is the second number? ")
-  (Integer/parseInt (read-line)))
+(def prompt-second-number (make-int-prompt "What is the second number? "))
 
 (defn calculations
   [first second]
