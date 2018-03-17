@@ -1,24 +1,13 @@
-(ns efp-clojure.E04.e04)
+(ns efp-clojure.E04.e04
+  (:require [efp-clojure.utils.prompt :refer :all]))
 
-(defn- prompt-noun
-  []
-  (println "Enter a noun: ")
-  (read-line))
+(def prompt-noun (make-string-prompt "Enter noun: "))
 
-(defn- prompt-verb
-  []
-  (println "Enter a verb: ")
-  (read-line))
+(def prompt-verb (make-string-prompt "Enter a verb: "))
 
-(defn- prompt-adjective
-  []
-  (println "Enter an adjective: ")
-  (read-line))
+(def prompt-adjective (make-string-prompt "Enter an adjective: "))
 
-(defn- prompt-adverb
-  []
-  (println "Enter an adverb: ")
-  (read-line))
+(def prompt-adverb (make-string-prompt "Enter an adverb: "))
 
 (defn mad-lib
   "Creates a story from the provided words"
