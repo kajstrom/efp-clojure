@@ -12,3 +12,9 @@
   (fn []
     (println message)
     (Integer/parseInt (read-line))))
+
+(defn make-double-prompt
+  [message]
+  (fn []
+    (println message)
+    (Double/parseDouble (read-line))))
