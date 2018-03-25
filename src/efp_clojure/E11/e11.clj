@@ -1,5 +1,6 @@
 (ns efp-clojure.E11.e11
-  (:require [efp-clojure.utils.prompt :refer :all]))
+  (:require [efp-clojure.utils.prompt :refer :all])
+  (:import (java.math RoundingMode)))
 
 (def prompt-amount (make-int-prompt "How many euros are you exchanging?"))
 (def prompt-rate (make-double-prompt "What is the exchange rate?"))
@@ -9,7 +10,7 @@
 
 (defn convert [amount rate]
   (let [percentage-rate (/ rate 100)]
-    (.doubleValue (.setScale (* amount (bigdec percentage-rate)) 2 java.math.RoundingMode/CEILING))))
+    (.doubleValue (.setScale (* amount (bigdec percentage-rate)) 2 RoundingMode/CEILING))))
 
 (defn run []
   (let [amount (prompt-amount)
