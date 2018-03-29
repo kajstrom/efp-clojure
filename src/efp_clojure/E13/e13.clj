@@ -17,7 +17,7 @@
   (let [percentage-rate (/ rate 100)]
     (double-to-precision
      (* principal (expt (+ 1 (/ percentage-rate compounds)) (* years compounds)))
-     2 java.math.RoundingMode/HALF_UP)))
+     2 java.math.RoundingMode/CEILING)))
 
 (defn run
   []
