@@ -7,7 +7,7 @@
 (def users (list {:username "Kaj" :password "passw0rd"} {:username "Tinja" :password "abracadabra"}))
 
 (defn find-user [username]
-  (first (filter #(= username (:username %)) users)))
+  (some #(if (= username (:username %)) %) users))
 
 (defn is-valid? [entered-pw stored-pw]
   (= entered-pw stored-pw))
