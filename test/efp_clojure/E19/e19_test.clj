@@ -4,7 +4,8 @@
 
 (deftest test-bmi
   (testing "BMI Calculation"
-           (is (= 22.0 (bmi 80 200))))
+           (is (= 22.0 (bmi 80 200)))
+           (is (= 21.7 (bmi 90 250))))
   (testing "BMI Description"
            (is (= "Your BMI is 15.0.\nYou are underweight. You should see a doctor." (bmi-desc 15.0)))
            (is (= "Your BMI is 23.0.\nYou are within the ideal weight range." (bmi-desc 23.0)))

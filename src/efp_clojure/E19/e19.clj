@@ -1,11 +1,17 @@
 (ns efp-clojure.E19.e19
   (:require [efp-clojure.utils.prompt :refer :all]
-            [efp-clojure.utils.number :refer :all]))
+            [efp-clojure.utils.number :refer :all])
+  (:import java.math.RoundingMode))
 
 (defn bmi
   "Calculate BMI"
   [height weight]
-  (double-to-precision (* 703 (/ weight (* height height))) 1 java.math.RoundingMode/HALF_UP))
+  (double-to-precision
+   (*
+      703
+      (with-precision 10 :rounding RoundingMode/HALF_UP(/ weight (bigdec(* height height))))
+      )
+   1 RoundingMode/HALF_UP))
 
 (defn bmi-desc
   [bmi]
