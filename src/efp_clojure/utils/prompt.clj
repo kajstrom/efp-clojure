@@ -9,9 +9,12 @@
 
 (defn make-int-prompt
   [message]
-  (fn []
+  (fn prompt []
     (println message)
-    (Integer/parseInt (read-line))))
+    (try (Integer/parseInt (read-line))
+      (catch NumberFormatException e
+        (println "Invalid input! Please enter a valid integer.")
+        (prompt)))))
 
 (defn make-double-prompt
   [message]
