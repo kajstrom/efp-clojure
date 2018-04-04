@@ -11,7 +11,7 @@
   [message]
   (fn prompt []
     (println message)
-    (try (Integer/parseInt (read-line))
+    (try (Integer/parseInt (clojure.string/trim (read-line)))
       (catch NumberFormatException e
         (println "Invalid input! Please enter a valid integer.")
         (prompt)))))
