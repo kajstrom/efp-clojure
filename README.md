@@ -2,4 +2,9 @@
 
 [Exercises for Programmers](https://pragprog.com/book/bhwb/exercises-for-programmers)
 
-## TODO
+## Notes for me
+
+Get bash to cljpgsql container:
+```
+docker container exec -it cljpgsql /bin/bash
+```
