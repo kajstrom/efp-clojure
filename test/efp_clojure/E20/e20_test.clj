@@ -4,23 +4,23 @@
 
 (deftest test-calculate-total
   (testing "Calculation for a state with no sales tax"
-           (let [total (calculate-total "New York" nil 10)]
+           (let [total (calculate-total "new York" nil 10)]
              (is (= 10.0 (:total total)))
              (is (nil? (:tax total)))))
   (testing "Calculation for a state with sales tax but no county tax"
-           (let [total (calculate-total "Illinois" nil 10)]
+           (let [total (calculate-total "illinois" nil 10)]
              (is (= 10.8 (:total total)))
              (is (= 0.8 (:tax total)))))
   (testing "Calculation for a state with sales tax and county tax"
-           (let [total (calculate-total "Wisconsin" "Eau Claire" 10)]
+           (let [total (calculate-total "wisconsin" "eau claire" 10)]
              (is (= 10.55 (:total total)))
              (is (= 0.55 (:tax total))))))
 
 (deftest test-find-state
   (testing "Finds a state with state tax"
-           (is (= "Wisconsin" (:name (find-state "Wisconsin")))))
+           (is (= "wisconsin" (:name (find-state "wisconsin")))))
   (testing "Does not find a state with no state tax"
-           (is (nil? (find-state "North Carolina")))))
+           (is (nil? (find-state "north carolina")))))
 
 (deftest test-find-county-tax
   (testing "Finds county tax for a county with tax"

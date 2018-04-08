@@ -3,7 +3,7 @@
             [efp-clojure.utils.number :refer :all]
             [clojure.string :as s]))
 
-(def states '({:name "wisconsin" :tax 0.05 :counties (list {:name "Eau Claire" :tax 0.005} {:name "dunn" :tax 0.004})}
+(def states '({:name "wisconsin" :tax 0.05 :counties (list {:name "eau claire" :tax 0.005} {:name "dunn" :tax 0.004})}
              {:name "illinois" :tax 0.08}))
 
 (defn find-state [state]
