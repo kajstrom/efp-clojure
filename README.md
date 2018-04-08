@@ -3,7 +3,7 @@
 [Exercises for Programmers](https://pragprog.com/book/bhwb/exercises-for-programmers)
 
 ## Notes
-pgsql postfixed modules the cljpgsql container must be running. 
+To run pgsql postfixed modules the cljpgsql container must be running. 
 
 
 Create and start cljpgsql container
