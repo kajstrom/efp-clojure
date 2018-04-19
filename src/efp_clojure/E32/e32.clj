@@ -2,7 +2,7 @@
   (:require [efp-clojure.utils.prompt :refer :all]
             [efp-clojure.E32.guess-number :refer :all]))
 
-(declare start-game)
+(declare start-game correct-guess)
 
 (defn prompt-difficulty
   []
@@ -23,14 +23,17 @@
   [number]
   (let [guess-result (guess number)]
     (if (= :correct guess-result)
-      (do
-        (println "Correct! You got it right in" @guess-cnt "tries.")
-        (if (play-again)
-          (start-game)
-          (println "Goodbye!")))
+      (correct-guess)
       (case guess-result
         :low (handle-guess (guess-too-low))
         :high (handle-guess (guess-too-high))))))
+
+(defn correct-guess
+  []
+  (println "Correct! You got it right in" @guess-cnt "tries.")
+  (if (play-again)
+    (start-game)
+    (println "Goodbye!")))
 
 (defn start-game
   []
