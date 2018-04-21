@@ -1,15 +1,6 @@
 (ns efp-clojure.E34.e34
-  (:require [efp-clojure.utils.prompt :refer :all]))
-
-(def employees (atom ["John Smith" "Jackie Jackson" "Chris Jones" "Amanda Cullen" "Jeremy Goodwin"]))
-
-(defn delete-employee
-  [name]
-  (swap! employees (fn [employees] (remove #(= name %) employees))))
-
-(defn find-employee
-  [name]
-  (first (filter #(= name %) @employees)))
+  (:require [efp-clojure.utils.prompt :refer :all]
+            [efp-clojure.E34.employee-list :refer :all]))
 
 (def prompt-employee-to-delete (make-string-prompt "Enter an employee name to remove:"))
 
@@ -22,6 +13,7 @@
 
 (defn run
   []
+  (load-employees)
   (print-employees)
   (let [emp-to-del (prompt-employee-to-delete)]
     (if (find-employee emp-to-del)
