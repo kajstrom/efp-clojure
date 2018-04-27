@@ -1,13 +1,12 @@
 (ns efp-clojure.E38.e38
-  (:require [efp-clojure.utils.prompt :refer :all]))
+  (:require [efp-clojure.utils.prompt :refer :all]
+            [efp-clojure.E38.filter-even :refer [filter-even]]))
 
 (def prompt (make-string-prompt "Enter a list of numbers, separated by spaces:"))
 
 (defn number-string->number-list
   [values-string]
     (map #(Integer/parseInt %) (clojure.string/split values-string #" ")))
-
-(def filter-even (partial filter #(= (mod % 2) 0)))
 
 (defn run
   []
