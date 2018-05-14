@@ -7,4 +7,5 @@
                   [org.clojure/clojure "1.9.0"]
                   [org.clojure/math.numeric-tower "0.0.4"]
                   [org.clojure/java.jdbc "0.7.5"]
-                  [org.postgresql/postgresql "42.2.2"]])
+                  [org.postgresql/postgresql "42.2.2"]
+                  [cheshire "5.8.0"]])
