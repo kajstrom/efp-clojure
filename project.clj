@@ -9,5 +9,6 @@
                   [org.clojure/java.jdbc "0.7.5"]
                   [org.postgresql/postgresql "42.2.2"]
                   [cheshire "5.8.0"]
+                  [ring "1.6.3"]
                   [ring/ring-codec "1.1.1"]
                   [clj-http "3.9.0"]])
