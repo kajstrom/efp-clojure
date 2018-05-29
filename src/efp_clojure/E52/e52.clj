@@ -7,4 +7,4 @@
    :headers {"Content-Type" "application/json"}
    :body (cs/generate-string {"currentTime" (java.util.Date.)})})
 
-(defonce server (jetty/run-jetty #'handler {:port 3003 :join? false}))
+(defonce server (jetty/run-jetty #'handler {:port 3000 :join? false}))

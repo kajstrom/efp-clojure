@@ -11,4 +11,5 @@
                   [cheshire "5.8.0"]
                   [ring "1.6.3"]
                   [ring/ring-codec "1.1.1"]
+                  [clj-time "0.14.4"]
                   [clj-http "3.9.0"]])
